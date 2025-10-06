@@ -1,0 +1,274 @@
+@import '../css/_cssreset.css';
+
+@font-face {
+  font-family: mainFont;
+  src: url("../assets/InterTight-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: title;
+  src: url("../assets/Audiowide-Regular.ttf");
+}
+
+@font-face {
+  font-family: fontnyt;
+  src: url("../assets/Chomsky-8MOa2.otf");
+}
+
+body {
+  margin: 0;
+  color: #02123f;
+  font-family: mainFont;
+  height: 1000px;
+  background-color: #a0b1c2;
+}
+
+.navigation {
+  width: 1350px;
+  margin: auto;
+
+}
+
+.navigation .fixed {
+
+  position: fixed;
+  width: 1270px;
+  padding: 15px 40px;
+  background-image: linear-gradient(#b2ebf2, #00838f);
+  background-color: rgb(101, 141, 141);
+  display: flex;
+}
+
+.navigation .quick {
+  position: fixed;
+  width: 1270px;
+  height: 30px;
+  padding: 5px 40px;
+  margin-top: 60px;
+
+  background-color: #00838f;
+  display: flex;
+}
+
+.navigation .quick button {
+  cursor: pointer;
+  background-color: #b2ebf2;
+  border-radius: 5px;
+  border: 2px solid #00838f;
+  padding: 5px 10px;
+}
+
+.navigation .quick button:hover {
+  background-color: #00bcd4;
+}
+
+.navigation .fixed .home {
+  display: flex;
+  height: 20px;
+  padding: 5px 25px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: title;
+  color: #b2ebf2;
+  text-shadow: 3px 3px 3px #00838f;
+}
+
+.navigation .fixed .home:hover {
+  color: #00bcd4;
+}
+
+.news {
+  margin: auto;
+  width: 1270px;
+  padding: 20px 40px 40px 40px;
+  /* background-color: #c6c7b0; */
+  background-image: linear-gradient(#00838f, #006064);
+}
+
+
+.news .place {
+  height: 90px;
+}
+
+.news .holdSelect {
+  display: flex;
+
+  height: 90px;
+
+  margin-bottom: 20px;
+  background-color: #e1f5fe;
+}
+
+.news .holdSelect .gnlogo {
+
+  text-align: left;
+  height: 50px;
+  margin: 20px;
+
+}
+
+.news .holdSelect .select {
+  margin-left: 60px;
+  width: 200px;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  padding: 2px 10px;
+
+}
+
+.news .holdSelect .select .option {
+  font-size: 1.3rem;
+  padding: 5px 70px;
+
+}
+
+.news .holdSelect .times {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 30px 40px 20px 40px;
+
+
+  font-family: fontnyt;
+}
+
+.news h4 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+
+.news .logoPlace {
+  height: 90px;
+  background-color: #e1f5fe;
+  margin-bottom: 20px;
+}
+
+.news .logoPlace .logo {
+  height: 70px;
+  margin: 10px 30px;
+}
+
+.news .newsGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.news .newsGrid .gridContent {
+  width: 580px;
+  border-radius: 10px;
+  background-color: #e0f7fa;
+  padding: 20px;
+}
+
+.news .newsGrid .gridContent h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+}
+
+.news .newsGrid .gridContent h2 {
+  font-size: 1.4rem;
+  padding: 10px;
+  text-align: justify;
+
+}
+
+.news .newsGrid .gridContent p {
+  font-size: 1.2rem;
+  padding: 10px;
+  text-align: justify;
+}
+
+.news .newsGrid .gridContent .image {
+  width: 580px;
+
+}
+
+.news .guardianGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+
+
+}
+
+.news .guardianGrid .guContent {
+  width: 268px;
+  border-radius: 10px;
+  background-color: #e3f2fd;
+  border: 1px solid rgb(1, 1, 90);
+  padding: 20px;
+}
+
+.news .guardianGrid .guContent h1 {
+  font-size: 1.4rem;
+  padding: 10px;
+}
+
+.news .guardianGrid .guContent h2 {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.news .guardianGrid .guContent p,
+.news .guardianGrid .guContent a {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.news .footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #a0b1c2;
+  padding: 20px;
+  font-size: 0.7rem;
+  border-top: 1px solid #a0b1c2;
+}
+
+.artNum {
+  margin: auto;
+  display: flex;
+  width: 1270px;
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+.artNum .numb {
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 20px;
+  color: #e1e1e1;
+  cursor: pointer;
+}
+
+.artNum .numb:hover {
+  color: rgb(81, 140, 81);
+}
+
+.artNum .numb:active {
+  color: greenyellow;
+}
+
+.artNum .numbAct {
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 20px;
+  background-color: #00bcd4;
+  border-radius: 5px;
+  color: blanchedalmond;
+}
+
+.frame {
+  width: 200px;
+  height: 200px;
+}
+
+.paper {
+  margin-left: 120px;
+  padding: 5px 0px 0px 15px;
+
+}
