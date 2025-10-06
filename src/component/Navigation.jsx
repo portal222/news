@@ -1,14 +1,8 @@
 import { Routes, Route, NavLink, HashRouter } from 'react-router-dom';
 import Home from './Home';
-import First from './First';
 import GNews from './GNews';
 import Search from './Search';
-
-import { useRef } from "react";
 import SearchResult from './SearchResult';
-
-
-
 
 const Navigation = () => {
 
@@ -23,28 +17,22 @@ const Navigation = () => {
                         <NavLink to="/"
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             className='home'>
-
                             NEWS from AROUND the WORLD
-
                         </NavLink>
                         <Search />
-
                     </div>
                 </div>
-
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/news' element={<SearchResult />} />
-                    <Route path='/first/:id/*' element={<First />} />
                     <Route path='/option/:event' element={<GNews />} />
                 </Routes>
                 <div className='news'>
                     <div className='footer'>
-                        <p>The data for this site is collected from free APIs. That's why the news is not the most recent, for the New York Times, the news on the front page is related to New York. For the Guardian it is news from London.</p>
+                        <p>The data for this site is collected from free APIs. That's why the news is not the most recent. Gnews has a limit of 100 calls per day. For the New York Times, the news on the front page is related to New York. For the Guardian it is news from London.</p>
                         <p>© {year} InTerVal</p>
                     </div>
                 </div>
-
             </HashRouter>
         </>
     )

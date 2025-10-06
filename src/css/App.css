@@ -35,7 +35,8 @@ body {
   width: 1270px;
   padding: 15px 40px;
   background-image: linear-gradient(#b2ebf2, #00838f);
-  background-color: rgb(101, 141, 141);
+  height: 50px;
+
   display: flex;
 }
 
@@ -51,11 +52,13 @@ body {
 }
 
 .navigation .quick button {
+  font-size: 1.1rem;
   cursor: pointer;
   background-color: #b2ebf2;
   border-radius: 5px;
   border: 2px solid #00838f;
   padding: 5px 10px;
+  height: 30px;
 }
 
 .navigation .quick button:hover {
@@ -64,6 +67,7 @@ body {
 
 .navigation .fixed .home {
   display: flex;
+  text-align: left;
   height: 20px;
   padding: 5px 25px;
   text-decoration: none;
@@ -81,7 +85,6 @@ body {
   margin: auto;
   width: 1270px;
   padding: 20px 40px 40px 40px;
-  /* background-color: #c6c7b0; */
   background-image: linear-gradient(#00838f, #006064);
 }
 
@@ -127,15 +130,14 @@ body {
   font-weight: 600;
   text-align: left;
   padding: 30px 40px 20px 40px;
-
-
   font-family: fontnyt;
 }
 
 .news h4 {
   font-size: 1.5rem;
-  margin-top: 40px;
-  margin-left: 60px;
+
+  margin: 40px 10px 0px 60px;
+
 }
 
 
@@ -185,15 +187,12 @@ body {
 
 .news .newsGrid .gridContent .image {
   width: 580px;
-
 }
 
 .news .guardianGrid {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
-
-
 }
 
 .news .guardianGrid .guContent {
@@ -240,7 +239,7 @@ body {
 .artNum .numb {
   padding: 8px 10px;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.3rem;
   color: #e1e1e1;
   cursor: pointer;
 }
@@ -256,7 +255,7 @@ body {
 .artNum .numbAct {
   text-align: center;
   padding: 8px 10px;
-  font-size: 20px;
+  font-size: 1.3rem;
   background-color: #00bcd4;
   border-radius: 5px;
   color: blanchedalmond;
@@ -269,6 +268,204 @@ body {
 
 .paper {
   margin-left: 120px;
-  padding: 5px 0px 0px 15px;
+  height: 30px;
+  width: 250px;
+  padding: 5px 0px 5px 15px;
+}
 
+.paper .input {
+  color: gray;
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .navigation {
+    width: 355px;
+  }
+
+  .navigation .fixed {
+    width: 325px;
+    padding: 10px 15px;
+    display: block;
+    height: 100px;
+  }
+
+  .navigation .quick {
+    position: fixed;
+    width: 341px;
+    height: 35px;
+    padding: 5px 7px;
+    margin-top: 118px;
+  }
+
+  .navigation .quick button {
+    font-size: 0.9rem;
+    border-radius: 3px;
+    border: 1px solid #00838f;
+    padding: 3px 8px;
+    height: 30px;
+  }
+
+  .navigation .fixed .home {
+    height: 45px;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 2px #00838f;
+  }
+
+  .news {
+    width: 355px;
+    padding: 20px 0px 20px 0px;
+  }
+
+  .news .place {
+    height: 155px;
+  }
+
+  .news .holdSelect {
+
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .news .holdSelect .gnlogo {
+    height: 35px;
+    margin: 10px;
+  }
+
+  .news .holdSelect .select {
+    margin-left: 20px;
+    width: 150px;
+    font-size: 1rem;
+    margin-top: 15px;
+    padding: 2px 7px;
+  }
+
+  .news .holdSelect .select .option {
+    font-size: 1.1rem;
+    padding: 5px 50px;
+  }
+
+  .news .holdSelect .times {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+  }
+
+  .news h4 {
+    font-size: 0.8rem;
+    margin: 25px 10px 0px 10px;
+  }
+
+  .news .logoPlace {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .news .logoPlace .logo {
+    height: 35px;
+    margin: 10px 20px;
+  }
+
+  .news .newsGrid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+
+  .news .newsGrid .gridContent {
+    width: 325px;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  .news .newsGrid .gridContent h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .news .newsGrid .gridContent h2 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .news .newsGrid .gridContent p {
+    font-size: 0.9rem;
+    padding: 10px;
+
+  }
+
+  .news .newsGrid .gridContent .image {
+    width: 325px;
+  }
+
+  .news .guardianGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 6px;
+  }
+
+  .news .guardianGrid .guContent {
+    width: 160px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .news .guardianGrid .guContent h1 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .news .guardianGrid .guContent h2 {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .news .guardianGrid .guContent p,
+  .news .guardianGrid .guContent a {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .news .footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 0.6rem;
+  }
+
+  .artNum {
+
+    display: flex;
+    width: 335px;
+
+    margin-top: 10px;
+  }
+
+  .artNum .numb {
+    padding: 5px 8px;
+
+    font-size: 1rem;
+
+  }
+
+  .artNum .numbAct {
+    text-align: center;
+    padding: 5px 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+
+  .paper {
+    margin-left: 20px;
+    width: 260px;
+    padding: 3px 3px 5px 10px;
+    height: 26px;
+
+  }
 }

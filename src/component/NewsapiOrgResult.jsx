@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import newsapiLogo from "../assets/naLogo.png"
 
-
 const NewsapiOrgResult = (props) => {
 
     const [error, setError] = useState(null);
@@ -27,7 +26,6 @@ const NewsapiOrgResult = (props) => {
             setApiOrg(data.articles)
             setTotalNews(data.totalResults)
 
-            console.log("pretraga newsAPI sajta", data);
         } catch (err) {
             setError(err);
         }
@@ -42,11 +40,8 @@ const NewsapiOrgResult = (props) => {
                 <div className="place"></div>
                 <div className="holdSelect">
                     <img src={newsapiLogo} alt="" className="gnlogo" />
-
                     <h4> {totalNews} results for {search} page {page}</h4>
-
                 </div>
-
                 <div className="newsGrid">
                     {apiOrg.map((apio, id) => (
                         <div key={id} className="gridContent">
@@ -80,13 +75,8 @@ const NewsapiOrgResult = (props) => {
                         </div>
                     ))}
                 </div>
-
             </div>
-
-
-
         </>
     )
-
 }
 export default NewsapiOrgResult;

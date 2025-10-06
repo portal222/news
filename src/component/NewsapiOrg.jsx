@@ -9,7 +9,6 @@ const NewsapiOrg = () => {
 
     useEffect(() => {
         getNewsapi();
-
     }, []);
 
     const getNewsapi = async () => {
@@ -21,9 +20,6 @@ const NewsapiOrg = () => {
 
             setApiOrg(data.articles)
 
-            console.log("novi newsAPI sajt", data);
-
-
         } catch (err) {
             setError(err);
         }
@@ -33,9 +29,8 @@ const NewsapiOrg = () => {
         <>
             <div className="news">
                 <div className="place"></div>
-
                 <div className="logoPlace">
-                   <img src={newsapiLogo} alt="" className="logo"/>
+                    <img src={newsapiLogo} alt="" className="logo" />
                 </div>
                 <div className="newsGrid">
                     {apiOrg.map((apio, id) => (
@@ -46,7 +41,6 @@ const NewsapiOrg = () => {
                             {apio.urlToImage && (
                                 <img src={apio.urlToImage} alt="no picture" className="image" />
                             )}
-
                             <p>{apio.publishedAt.split('T')[0]}</p>
                             <p>Author {apio.author}</p>
                             <p>
@@ -58,6 +52,5 @@ const NewsapiOrg = () => {
             </div>
         </>
     )
-
 }
 export default NewsapiOrg;

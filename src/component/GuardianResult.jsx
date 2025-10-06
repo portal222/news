@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
 import guLogo from "../assets/guardianLogo.png"
-
 
 const GuardianResult = (props) => {
 
@@ -12,7 +10,6 @@ const GuardianResult = (props) => {
     const [news, setNews] = useState([]);
 
     const search = props.search
-
 
     useEffect(() => {
         getNews(search, page);
@@ -28,7 +25,6 @@ const GuardianResult = (props) => {
             setTotalNews(data.total);
             setNews(data.results);
 
-            console.log("guardian pretraga", data);
         } catch (err) {
             setError(err);
         }
@@ -43,11 +39,8 @@ const GuardianResult = (props) => {
                 <div className="place"></div>
                 <div className="holdSelect">
                     <img src={guLogo} alt="" className="gnlogo" />
-
                     <h4> {totalNews} results for {search} page {page}</h4>
-
                 </div>
-
                 <div className="guardianGrid">
                     {news.map((gu, id) => (
                         <div key={id} className="guContent">
@@ -58,7 +51,6 @@ const GuardianResult = (props) => {
                         </div>
                     ))}
                 </div>
-
                 <div className="artNum">
                     {Array.from({ length: totalPages }, (_, i) => (
                         <div className={page === i + 1 ? 'numbAct' : 'numb'}
@@ -76,6 +68,5 @@ const GuardianResult = (props) => {
             </div>
         </>
     )
-
 }
 export default GuardianResult;

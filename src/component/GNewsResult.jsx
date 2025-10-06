@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import gnewsLogo from "../assets/gnewsLogo.svg";
-
+import gnewsLogo from "../assets/Gnews.png";
 
 const GNewsResult = (props) => {
 
@@ -27,7 +26,6 @@ const GNewsResult = (props) => {
             setTotalGnews(data.data.totalArticles);
             setArticles(data.data);
 
-            console.log("GN news pretraga", data.data);
         } catch (err) {
             setError(err);
         }
@@ -42,11 +40,8 @@ const GNewsResult = (props) => {
                 <div className="place"></div>
                 <div className="holdSelect">
                     <img src={gnewsLogo} alt="" className="gnlogo" />
-
                     <h4> {totalGnews} results for {search} page {gpage}</h4>
-
                 </div>
-
                 <div className="newsGrid">
                     {gnews.map((gn, id) => (
                         <div key={id} className="gridContent">
@@ -61,9 +56,7 @@ const GNewsResult = (props) => {
                                 {" " + gn.source.country}
                             </p>
                         </div>
-
                     ))}
-
                 </div>
                 {articles?.articlesRemovedFromResponse?.historicalArticles?.message && (
                     <div className="holdSelect">
@@ -84,14 +77,8 @@ const GNewsResult = (props) => {
                         </div>
                     ))}
                 </div>
-
-
             </div>
-
-
-
         </>
     )
-
 }
 export default GNewsResult;

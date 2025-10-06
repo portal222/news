@@ -32,10 +32,10 @@ const SearchResult = () => {
         <>
             <div className="navigation" >
                 <div className="quick" >
-                    <button onClick={scrollToSelect0}>Newsapi org</button>
+                    <button onClick={scrollToSelect0}>Newsapi</button>
                     <button onClick={scrollToSelect}>GNews</button>
-                    <button onClick={scrollToSelect2}>The New York Times</button>
-                    <button onClick={scrollToSelect3}>The Guardian</button>
+                    <button onClick={scrollToSelect2}>New York Times</button>
+                    <button onClick={scrollToSelect3}>Guardian</button>
                 </div>
             </div>
 

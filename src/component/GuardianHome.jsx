@@ -20,7 +20,6 @@ const GuardianHome = () => {
 
             setNews(data.results);
 
-            console.log("guardian podaci", data);
         } catch (err) {
             setError(err);
         }
@@ -46,6 +45,5 @@ const GuardianHome = () => {
             </div>
         </>
     )
-
 }
 export default GuardianHome;

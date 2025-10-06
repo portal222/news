@@ -2,14 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 
 const NewYorkTimesResult = (props) => {
 
-    const [error, setError] = useState(null);
     const [nyTimes, setNyTimes] = useState([]);
     const [total, setTotal] = useState(0);
     const [pageNyt, setPageNyt] = useState(1);
 
-
     const search = props.search
-
 
     useEffect(() => {
         getTimes(search, pageNyt);
@@ -24,8 +21,6 @@ const NewYorkTimesResult = (props) => {
 
         setTotal(dataHits);
         setNyTimes(data.response.docs);
-     
-
     };
 
     const totalPagesNyt = Math.ceil(total / 10);
@@ -48,7 +43,6 @@ const NewYorkTimesResult = (props) => {
                             {times.multimedia.default.url && (
                                 <img src={times.multimedia.default.url} alt="no picture" className="image" />
                             )}
-
                             <p>{times.pub_date.split('T')[0]}</p>
                             <p>Author {times.byline.original}</p>
                             <p>
@@ -57,7 +51,6 @@ const NewYorkTimesResult = (props) => {
                         </div>
                     ))}
                 </div>
-
                 <div className="artNum">
                     {Array.from({ length: totalPagesNyt }, (_, i) => (
                         <div className={pageNyt === i + 1 ? 'numbAct' : 'numb'}
@@ -73,7 +66,6 @@ const NewYorkTimesResult = (props) => {
                     ))}
                 </div>
             </div>
-
         </>
     )
 };
