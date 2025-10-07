@@ -5,33 +5,61 @@ import gnewsLogo from "../assets/Gnews.png";
 const GNewsResult = (props) => {
 
     const [error, setError] = useState(null);
-    const [articles, setArticles] = useState([]);
-    const [gnews, setGnews] = useState([]);
-    const [gpage, setGpage] = useState(1);
-    const [totalGnews, setTotalGnews] = useState(0);
+    // const [articles, setArticles] = useState([]);
+    // const [gnews, setGnews] = useState([]);
+    // const [gpage, setGpage] = useState(1);
+    // const [totalGnews, setTotalGnews] = useState(0);
 
     const search = props.search
 
-    useEffect(() => {
-        getGNews(search, gpage);
-    }, [search, gpage]);
+    
+    // var url = `https://api.currentsapi.services/v1/search?keywords=${search}}&language=en&apiKey=EmBgxNlNZYu52U0GH9uV35B2xcPZq3gCTBHYzIxy1Bce5Sot`;
+    // var req = new Request(url);
+    // fetch(req)
+    //     .then(function(response) {
+    //         console.log("current sajt", response.json());
+    //     })
 
-    const getGNews = async (search, gpage) => {
-        const url = `https://gnews.io/api/v4/search?q=${search}&lang=en&page=${gpage}&apikey=ac40901e67e1d4c76cf9f66e88e0a2a6`
 
+          useEffect(() => {
+        getGNews(search);
+    }, [search]);
+
+    const getGNews = async (search) => {
+    var url = `https://api.currentsapi.services/v1/search?keywords=${search}&language=en&apiKey=EmBgxNlNZYu52U0GH9uV35B2xcPZq3gCTBHYzIxy1Bce5Sot`;
+
+      
         try {
             const response = await axios.get(url);
             const data = response
-            setGnews(data.data.articles);
-            setTotalGnews(data.data.totalArticles);
-            setArticles(data.data);
+         
+      console.log("current sajt", data);
 
         } catch (err) {
             setError(err);
         }
     }
 
-    const totalGpages = Math.ceil(totalGnews / 10);
+    // useEffect(() => {
+    //     getGNews(search, gpage);
+    // }, [search, gpage]);
+
+    // const getGNews = async (search, gpage) => {
+    //     const url = `https://gnews.io/api/v4/search?q=${search}&lang=en&page=${gpage}&apikey=ac40901e67e1d4c76cf9f66e88e0a2a6`
+
+    //     try {
+    //         const response = await axios.get(url);
+    //         const data = response
+    //         setGnews(data.data.articles);
+    //         setTotalGnews(data.data.totalArticles);
+    //         setArticles(data.data);
+
+    //     } catch (err) {
+    //         setError(err);
+    //     }
+    // }
+
+    // const totalGpages = Math.ceil(totalGnews / 10);
 
     return (
         <>
@@ -39,10 +67,10 @@ const GNewsResult = (props) => {
                 <div className="top1" ></div>
                 <div className="place"></div>
                 <div className="holdSelect">
-                    <img src={gnewsLogo} alt="" className="gnlogo" />
-                    <h4> {totalGnews} results for {search} page {gpage}</h4>
+           
+                    <h4> crrent sajt</h4>
                 </div>
-                <div className="newsGrid">
+                {/* <div className="newsGrid">
                     {gnews.map((gn, id) => (
                         <div key={id} className="gridContent">
                             <h1>{gn.title}</h1>
@@ -76,7 +104,7 @@ const GNewsResult = (props) => {
                             {i + 1}
                         </div>
                     ))}
-                </div>
+                </div> */}
             </div>
         </>
     )

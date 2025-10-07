@@ -1,9 +1,9 @@
 import React, { useRef, useContext } from "react";
 import GlobalContext from "./GlobalContext";
 import NewsapiOrgResult from "./NewsapiOrgResult";
-import GNewsResult from "./GNewsResult";
 import NewYorkTimesResult from "./NewYorkTimesResult";
 import GuardianResult from "./GuardianResult";
+import CurrentsResult from "./CurrentsResult";
 
 const SearchResult = () => {
 
@@ -33,7 +33,7 @@ const SearchResult = () => {
             <div className="navigation" >
                 <div className="quick" >
                     <button onClick={scrollToSelect0}>Newsapi</button>
-                    <button onClick={scrollToSelect}>GNews</button>
+                    <button onClick={scrollToSelect}>Currents api</button>
                     <button onClick={scrollToSelect2}>New York Times</button>
                     <button onClick={scrollToSelect3}>Guardian</button>
                 </div>
@@ -42,7 +42,7 @@ const SearchResult = () => {
             <div ref={selectRef0}></div>
             <NewsapiOrgResult search={searchStringValue} />
             <div ref={selectRef}></div>
-            <GNewsResult search={searchStringValue} />
+            <CurrentsResult search={searchStringValue} />
             <div ref={selectRef2}></div>
             <NewYorkTimesResult search={searchStringValue} />
             <div ref={selectRef3}></div>
