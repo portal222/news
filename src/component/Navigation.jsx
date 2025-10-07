@@ -29,7 +29,7 @@ const Navigation = () => {
                 </Routes>
                 <div className='news'>
                     <div className='footer'>
-                        <p>The data for this site is collected from free APIs. That's why the news is not the most recent. Gnews has a limit of 100 calls per day. For the New York Times, the news on the front page is related to New York. For the Guardian it is news from London.</p>
+                        <p>The data for this site is collected from free APIs. That's why the news is not the most recent. News API and Gnews has a limit of 100 calls per day. For the New York Times, the news on the front page is related to New York. For the Guardian it is news from London.</p>
                         <p>© {year} InTerVal</p>
                     </div>
                 </div>
