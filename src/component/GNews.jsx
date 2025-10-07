@@ -29,7 +29,7 @@ const GNews = () => {
     }, [categ]);
 
     const getGNews = async (categ) => {
-        const url = `https://gnews.io/api/v4/top-headlines?category=${categ}&lang=en&apikey=7aaab2d977061a3e92aab036882182d7`
+        const url = `https://gnews.io/api/v4/top-headlines?category=${categ}&lang=en&apikey=ac40901e67e1d4c76cf9f66e88e0a2a6`
         try {
             const response = await axios.get(url);
             const data = response

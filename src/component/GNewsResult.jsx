@@ -17,7 +17,7 @@ const GNewsResult = (props) => {
     }, [search, gpage]);
 
     const getGNews = async (search, gpage) => {
-        const url = `https://gnews.io/api/v4/search?q=${search}&lang=en&page=${gpage}&apikey=7aaab2d977061a3e92aab036882182d7`
+        const url = `https://gnews.io/api/v4/search?q=${search}&lang=en&page=${gpage}&apikey=ac40901e67e1d4c76cf9f66e88e0a2a6`
 
         try {
             const response = await axios.get(url);
