@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import gnewsLogo from "../assets/Gnews.png";
+import gnewsLogo from "../../public/assets/Gnews.png";
 
 const GNews = () => {
 

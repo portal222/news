@@ -37,7 +37,7 @@ const NewYorkTimes = () => {
                             <h2>{times.abstract}</h2>
                             <p>{times.multimedia.caption}</p>
                             {times.multimedia.default.url && (
-                                <img src={times.multimedia.default.url} alt="no picture" className="image" />
+                                <img src={times.multimedia.default.url} alt=" no picture" className="image" />
                             )}
                             <p>{times.pub_date.split('T')[0]}</p>
                             <p>Author {times.byline.original}</p>

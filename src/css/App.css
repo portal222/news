@@ -2,17 +2,22 @@
 
 @font-face {
   font-family: mainFont;
-  src: url("../assets/InterTight-VariableFont_wght.ttf");
+  src: url("../../public/assets/InterTight-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: title;
-  src: url("../assets/Audiowide-Regular.ttf");
+  src: url("../../public/assets/Audiowide-Regular.ttf");
 }
 
 @font-face {
   font-family: fontnyt;
-  src: url("../assets/Chomsky-8MOa2.otf");
+  src: url("../../public/assets/Chomsky-8MOa2.otf");
+}
+
+@font-face {
+  font-family: fontSp;
+  src: url("../../public/assets/Genos-VariableFont_wght.ttf");
 }
 
 body {
@@ -57,12 +62,28 @@ body {
   background-color: #b2ebf2;
   border-radius: 5px;
   border: 2px solid #00838f;
-  padding: 5px 10px;
-  height: 30px;
+  padding: 5px 10px 8px 10px;
+  height: 32px;
+}
+
+.navigation .quick .spaceButt {
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: title;
+  color: #b2ebf2;
+  background-image: linear-gradient(#64b5f6, #1565c0);
+  border-radius: 5px;
+  border: 1px solid #bbdefb;
+  padding: 5px 10px 8px 10px;
+  height: 32px;
 }
 
 .navigation .quick button:hover {
   background-color: #00bcd4;
+}
+
+.navigation .quick .spaceButt:hover {
+  color: #00bcd4;
 }
 
 .navigation .fixed .home {
@@ -131,6 +152,15 @@ body {
   text-align: left;
   padding: 30px 40px 20px 40px;
   font-family: fontnyt;
+}
+
+.news .holdSelect .spaceFont {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #5c6bc0;
+  padding: 10px 40px 10px 40px;
+  font-family: fontSp;
 }
 
 .news h4 {
@@ -203,6 +233,24 @@ body {
   padding: 20px;
 }
 
+.news .guardianGrid .guContent .spaceImg {
+  width: 268px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.news .guardianGrid .guContent .spaceTitle {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 35px 5px 10px 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.news .guardianGrid .guContent .spaceTitle:hover {
+  color: #00bcd4;
+}
+
 .news .guardianGrid .guContent h1 {
   font-size: 1.4rem;
   padding: 10px;
@@ -221,7 +269,7 @@ body {
 
 .news .footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 70px;
   color: #a0b1c2;
   padding: 20px;
   font-size: 0.7rem;
@@ -277,6 +325,37 @@ body {
   color: gray;
 }
 
+.loadPlace {
+  display: flex;
+  margin: auto;
+  width: 1350px;
+  height: 300px;
+  background-color: #00838f;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loadPlace .loader {
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #25b09b;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  animation: l27 1s infinite steps(8);
+}
+@keyframes l27 {
+  100% {transform: rotate(1turn)}
+}
+
 
 @media screen and (max-width: 500px) {
 
@@ -300,9 +379,15 @@ body {
   }
 
   .navigation .quick button {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border-radius: 3px;
-    border: 1px solid #00838f;
+    padding: 3px 7px;
+    height: 35px;
+  }
+
+  .navigation .quick .spaceButt {
+    font-size: 0.8rem;
+    border-radius: 5px;
     padding: 3px 8px;
     height: 35px;
   }
@@ -354,6 +439,12 @@ body {
     text-align: center;
     padding: 15px 15px 15px 15px;
   }
+
+  .news .holdSelect .spaceFont {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 15px 10px 15px;
+}
 
   .news h4 {
     font-size: 0.8rem;
@@ -415,6 +506,18 @@ body {
     border-radius: 5px;
     padding: 5px;
   }
+
+  .news .guardianGrid .guContent .spaceImg {
+  width: 162px;
+  cursor: pointer;
+}
+
+.news .guardianGrid .guContent .spaceTitle {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 25px 5px 10px 5px;
+  font-weight: 600;
+}
 
   .news .guardianGrid .guContent h1 {
     font-size: 1rem;

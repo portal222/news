@@ -1,24 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import gnewsLogo from "../assets/Gnews.png";
+import gnewsLogo from "../../public/assets/Gnews.png";
+
 
 const GNewsResult = (props) => {
 
     const [error, setError] = useState(null);
-    // const [articles, setArticles] = useState([]);
-    // const [gnews, setGnews] = useState([]);
-    // const [gpage, setGpage] = useState(1);
-    // const [totalGnews, setTotalGnews] = useState(0);
 
     const search = props.search
-
-    
-    // var url = `https://api.currentsapi.services/v1/search?keywords=${search}}&language=en&apiKey=EmBgxNlNZYu52U0GH9uV35B2xcPZq3gCTBHYzIxy1Bce5Sot`;
-    // var req = new Request(url);
-    // fetch(req)
-    //     .then(function(response) {
-    //         console.log("current sajt", response.json());
-    //     })
 
 
           useEffect(() => {

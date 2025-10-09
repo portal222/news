@@ -32,7 +32,7 @@ const Search = () => {
         >
             <InputBase
                 className="input"
-                placeholder="search the news"
+                placeholder="search world and space"
                 inputRef={searchString}
                 onKeyDown={handleKeyDown}
             />

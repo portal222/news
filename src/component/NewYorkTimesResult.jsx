@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
+import Loader from "./Loader";
+
 
 const NewYorkTimesResult = (props) => {
 
     const [nyTimes, setNyTimes] = useState([]);
     const [total, setTotal] = useState(0);
     const [pageNyt, setPageNyt] = useState(1);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     const search = props.search
 
@@ -21,10 +25,25 @@ const NewYorkTimesResult = (props) => {
 
         setTotal(dataHits);
         setNyTimes(data.response.docs);
+        setIsLoading(false);
+
     };
 
     const totalPagesNyt = Math.ceil(total / 10);
 
+    if (isLoading) {
+        return (
+            <>
+                <div className="news">
+                    <div className="place"></div>
+                    <div className="holdSelect">
+                        <p className="times">The New York Times </p>
+                    </div>
+                </div>
+                <Loader />
+            </>
+        )
+    }
     return (
         <>
             <div className="news">
@@ -41,7 +60,7 @@ const NewYorkTimesResult = (props) => {
                             <h2>{times.abstract}</h2>
                             <p>{times.multimedia.caption}</p>
                             {times.multimedia.default.url && (
-                                <img src={times.multimedia.default.url} alt="no picture" className="image" />
+                                <img src={times.multimedia.default.url} alt=" no picture" className="image" />
                             )}
                             <p>{times.pub_date.split('T')[0]}</p>
                             <p>Author {times.byline.original}</p>

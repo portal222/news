@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [pluginReact()],
   html: {
     title: 'news',
-    favicon: './src/assets/historical.png',
+    favicon: './public/assets/historical.png',
   },
 });

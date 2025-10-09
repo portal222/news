@@ -39,7 +39,7 @@ const NewsapiOrg = () => {
                             <h2>{apio.description}</h2>
                             <p>{apio.content}</p>
                             {apio.urlToImage && (
-                                <img src={apio.urlToImage} alt="no picture" className="image" />
+                                <img src={apio.urlToImage} alt=" no picture" className="image" />
                             )}
                             <p>{apio.publishedAt.split('T')[0]}</p>
                             <p>Author {apio.author}</p>
