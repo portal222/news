@@ -48,7 +48,7 @@ const CurrentsApi = () => {
                                 <h1>{gn.title}</h1>
                                 <h2>{gn.description}</h2>
                                 {gn.image && (
-                                    <img src={gn.image} alt=" no picture" className="image" />
+                                    <img src={gn.image} alt="" className="image" />
                                 )}
                                 <p>{gn.published.split('+')[0]}</p>
                                 {gn.author && (

@@ -13,7 +13,7 @@ const GuardianHome = () => {
 
     const getNews = async () => {
 
-        const url = ` https://content.guardianapis.com/search?page=1&q=London&pageSize=12&api-key=e33e0d13-595a-4688-a23c-f17a1f0a7235`
+        const url = ` https://content.guardianapis.com/search?page=1&q=London&pageSize=12&api-key=3a1c68d6-e496-40cc-ac56-7a3f15d42227`
         try {
             const response = await axios.get(url);
             const data = response.data.response

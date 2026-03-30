@@ -21,6 +21,8 @@ const Reports = () => {
             setSpace(data.data.results);
             setTotal(data.data.count)
 
+            console.og("nasa reports", data);
+
         } catch (err) {
             setError(err);
         }
